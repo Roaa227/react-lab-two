@@ -1,0 +1,33 @@
+{
+    "products": [
+      {
+        "product_id": 1,
+        "product_name": "iphone 14",
+        "product_desc": 
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus distinctio, dolores voluptatum quibusdam temporibus cum iure repellat pariatur quidem eius saepe quae aliquam libero assumenda molestias eaque, voluptatem nam corporis?",
+        "product_category": "mobile"
+      },
+      {
+        "product_id": 2,
+        "product_name": "iphone 13",
+        "product_desc": 
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus distinctio, dolores voluptatum quibusdam temporibus cum iure repellat pariatur quidem eius saepe quae aliquam libero assumenda molestias eaque, voluptatem nam corporis?",
+        "product_category": "mobile"
+      },
+      {
+        "product_id": 3,
+        "product_name": "dell",
+        "product_desc": 
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus distinctio, dolores voluptatum quibusdam temporibus cum iure repellat pariatur quidem eius saepe quae aliquam libero assumenda molestias eaque, voluptatem nam corporis?",
+        "product_category": "laptop"
+      },
+      {
+        "product_id": 4,
+        "product_name": "apple",
+        "product_desc": 
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus distinctio, dolores voluptatum quibusdam temporibus cum iure repellat pariatur quidem eius saepe quae aliquam libero assumenda molestias eaque, voluptatem nam corporis?",
+        "product_category": "laptop"
+      }
+    ]
+  }
+  
