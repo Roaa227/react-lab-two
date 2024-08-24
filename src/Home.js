@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "./useFetch";
+import useFetch from "./components/useFetch";
 
 export const Home = () => {
     const { data: products, isLoading, error } = useFetch("http://localhost:8000/products");
@@ -18,7 +18,7 @@ export const Home = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <a className="nav-link active" aria-current="page" href={`/product/${product.id}`} >Home</a>
                             <a className="nav-link" href="#">Pricing</a>
                         </div>
                     </div>
