@@ -34,29 +34,31 @@ import {
 } from 'react-router-dom';
 import MainLayout from './components/Layout/MainLay';
 import HelpLayout from './components/Layout/Help';
-import ProductDetails from './components/Details';
+import ProductDetails from './components/Cards/Details';
 import { Faq } from './components/Faq';
 import { Contact } from './components/Contact';
 import ProductList from './components/List';
-import NotFoundPage from './components/PageNotFound';
-const products = [
-  { id: 1, name: 'Product 1', price: '$15', photo:'\other1.jpg', description: 'Description of Product 1' },
-  { id: 2, name: 'Product 2', price: '$10', photo: '\other2.jpg', description: 'Description of Product 2' },
-  { id: 3, name: 'Product 3', price: '$20', photo: '\other3.jpg', description: 'Description of Product 3' },
-  { id: 4, name: 'Product 4', price: '$30', photo: '\other4.jpg', description: 'Description of Product 4' },
-];
-
+import NotFoundPage from './components/Cards/PageNotFound';
+import NotFond from './components/404/404';
+import { DetailsLoader } from './components/Cards/Details';
+import { ListLoader } from './components/List';
+import Add from './components/Cards/add';
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<MainLayout />}>
-      <Route index element={<ProductList products={products} />} /> 
-      <Route path="product/:id" element={<ProductDetails products={products} />} />
-      <Route path="help" element={<HelpLayout />}>
-        <Route path="faq" element={<Faq />} />
-        <Route path="contact" element={<Contact />} />
+    <>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<ProductList />} loader={ListLoader} errorElement={<NotFoundPage />} />
+        <Route path="product/:id" element={<ProductDetails loader={DetailsLoader}/>} errorElement={<NotFoundPage />} />
+        <Route path="help" element={<HelpLayout />}>
+          <Route path="faq" element={<Faq />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+        {/* <Route path='*' element={<NotFoundPage />} /> */}
+        <Route path='*' element={<NotFond />} />
+        <Route path='add' element={<Add />} />
       </Route>
-        <Route path='*' element={<NotFoundPage />} />
-    </Route>
+    </>
+
   )
 );
 
